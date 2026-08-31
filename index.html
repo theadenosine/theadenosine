@@ -12,7 +12,7 @@
     --bone: #e9e6de;
     --bone-dim: #7d7a75;
     --red: #b91c26;
-    --embed-h: 352px;
+    --embed-h: clamp(120px, 34vw, 352px);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -97,11 +97,12 @@
     display: flex;
     flex-direction: row;
     gap: clamp(10px, 1.6vw, 18px);
+    overflow-x: auto;
   }
 
   .track-slot {
     flex: 1 1 0;
-    min-width: 0;
+    min-width: 220px;
     height: var(--embed-h);
     position: relative;
     border: 1px solid var(--line);
@@ -174,8 +175,7 @@
 
   .listen-link svg { flex-shrink: 0; width: 24px; height: 24px; }
 
-  @media (max-width: 640px) {
-    :root { --embed-h: 152px; }
+  @media (max-width: 640px), (max-aspect-ratio: 3/4) {
     .corner-link {
       top: calc(clamp(20px, 4.5vh, 40px) + clamp(180px, 34vh, 460px) + clamp(10px, 2vh, 18px) + 10px);
       left: clamp(14px, 3vw, 20px);
