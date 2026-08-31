@@ -72,6 +72,7 @@
     display: flex;
     justify-content: center;
     padding: clamp(20px, 4.5vh, 40px) 20px clamp(10px, 2vh, 18px);
+    position: relative;
   }
 
   header img {
@@ -177,7 +178,8 @@
 
   @media (max-width: 640px), (max-aspect-ratio: 3/4) {
     .corner-link {
-      top: calc(clamp(20px, 4.5vh, 40px) + clamp(180px, 34vh, 460px) + clamp(10px, 2vh, 18px) + 10px);
+      top: 100%;
+      margin-top: 10px;
       left: clamp(14px, 3vw, 20px);
       width: clamp(52px, 9vh, 84px);
       height: clamp(52px, 9vh, 84px);
@@ -189,11 +191,10 @@
 </head>
 <body>
 
-  <!-- Small link to another site. Replace href="#" with your Golden Dusk URL. -->
-  <a class="corner-link" href="#" target="_blank" rel="noopener" aria-label="Golden Dusk"></a>
-
   <!-- ============ BANNER ============ -->
   <header>
+    <!-- Small link to another site. Replace href="#" with your Golden Dusk URL. -->
+    <a class="corner-link" href="#" target="_blank" rel="noopener" aria-label="Golden Dusk"></a>
     <img src="banner.png" alt="Adenosine">
   </header>
 
