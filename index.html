@@ -39,8 +39,8 @@
     z-index: 5;
     overflow: hidden;
     display: block;
-    width: clamp(108px, 18vh, 162px);
-    height: clamp(108px, 18vh, 162px);
+    width: clamp(72px, 12vh, 108px);
+    height: clamp(72px, 12vh, 108px);
     border-radius: 8px;
   }
 
@@ -49,7 +49,7 @@
     position: absolute;
     inset: 0;
     background: #000 url("golden-dusk.jpg") center / contain no-repeat;
-    filter: blur(2px);
+    filter: blur(6px);
     z-index: -2;
   }
 
@@ -176,6 +176,12 @@
 
   @media (max-width: 640px) {
     :root { --embed-h: 152px; }
+    .corner-link {
+      top: calc(clamp(20px, 4.5vh, 40px) + clamp(180px, 34vh, 460px) + clamp(10px, 2vh, 18px) + 10px);
+      left: clamp(14px, 3vw, 20px);
+      width: clamp(52px, 9vh, 84px);
+      height: clamp(52px, 9vh, 84px);
+    }
     .listen-row { gap: 10px; }
     .listen-link { flex: 1 1 45%; font-size: 0.86rem; padding: 14px 12px; }
   }
@@ -184,7 +190,7 @@
 <body>
 
   <!-- Small link to another site. Replace href="#" with your Golden Dusk URL. -->
-  <a class="corner-link" href="https://duskgolden.netlify.app/" target="_blank" rel="noopener" aria-label="Golden Dusk"></a>
+  <a class="corner-link" href="#" target="_blank" rel="noopener" aria-label="Golden Dusk"></a>
 
   <!-- ============ BANNER ============ -->
   <header>
